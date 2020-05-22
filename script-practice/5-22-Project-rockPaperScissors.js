@@ -32,4 +32,6 @@ function computerPlay() {
   return choice;
 }
 
-console.log(playRound(playerSelection, computerSelection));
+// console.log(playRound(playerSelection, computerSelection));
+const para = document.getElementById("paragraph");
+para.textContent = playRound(playerSelection, computerSelection);
