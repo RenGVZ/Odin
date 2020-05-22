@@ -30,48 +30,59 @@
   </div>
 
   
-<script>
-  const parag = document.getElementById("paragraph");
-  function sayHi(name) {
-    // if (name === undefined) {
-    //   name = "stranger";
-    // }
-    name ?? "unknown";
+<script src="5-22-testFunctions.js">
+  // const parag = document.getElementById("paragraph");
+  // function sayHi(name) {
+  //   // if (name === undefined) {
+  //   //   name = "stranger";
+  //   // }
+  //   name ?? "unknown";
 
-    parag.textContent = `Hello, ${name}`;
-  }
+  //   parag.textContent = `Hello, ${name}`;
+  // }
 
-  // sayHi();
+  // // sayHi();
 
-  function checkAge(age) {
-    return (age>18) ? true : confirm("where are your parents?");
+  // function checkAge(age) {
+  //   return (age>18) ? true : confirm("where are your parents?");
 
-    return (age > 18) || confirm("where are your parents?");
-  }
+  //   return (age > 18) || confirm("where are your parents?");
+  // }
 
-  function min(a, b) {
-    return (a < b) ? a : b;
-  }
+  // function min(a, b) {
+  //   return (a < b) ? a : b;
+  // }
 
-  function pow(x, n) {
-    let result = x;
+  // function pow(x, n) {
+  //   let result = x;
 
-    for(let i = 1; i < n; i++){
-      return result *= x;
-    }
-    return result;
-  }
+  //   for(let i = 1; i < n; i++){
+  //     return result *= x;
+  //   }
+  //   return result;
+  // }
 
-  let x = prompt("x?", "");
-  let n = prompt ("n?", "");
+  // let x = prompt("x?", "");
+  // let n = prompt ("n?", "");
   
-  if (n < 1){
-    `power ${n} is not supported`;
-  } else {
-    parag.textContent = pow(x, n);
-  }
+  // if (n < 1){
+  //   `power ${n} is not supported`;
+  // } else {
+  //   parag.textContent = pow(x, n);
+  // }
 
-  // console.log(pow(3, 2));
+  // Arrow Functions
+
+  // let ask = (question, yes, no) => {
+  //   if (confirm(question)) yes();
+  //   else no();
+  // }
+
+  // ask(
+  //   "do you agree?",
+  //   yes = () => { alert("Yes I agree")},
+  //   no = () => { alert("I don't agree")}
+  // );
 
 </script>
   
