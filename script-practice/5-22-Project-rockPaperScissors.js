@@ -32,6 +32,9 @@ function computerPlay() {
   return choice;
 }
 
+const playBtn = document.getElementById("play-btn");
+playBtn.addEventListener("click", playRound);
+
 // console.log(playRound(playerSelection, computerSelection));
 const para = document.getElementById("paragraph");
 para.textContent = playRound(playerSelection, computerSelection);
