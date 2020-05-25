@@ -1,20 +1,83 @@
-//Exercise 5 - While loops
-
-const iLike = ["books", "music", "coffee", "cringe"];
-let para = document.getElementById("paragraph");
-let sentence = "I like ";
+//Practice 2 -
+const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
+    
+const admitted = document.querySelector('.admitted');
+const refused = document.querySelector('.refused');
+admitted.textContent = "Admit ";
+refused.textContent = "Refuse ";
 
 let i = 0;
-while (i < iLike.length){
-  if (i === iLike.length - 1) {
-    sentence += " and " + iLike[i] + ".";
+do {
+  if (people[i] === "Phil" || people[i] === "Lola") {
+    refused.textContent += people[i] + ", "
   } else {
-    sentence += iLike[i] + ", ";
+    admitted.textContent += people[i] + ", ";
   }
   i++
-};
+} while (i < people.length - 1);
 
-para.textContent += sentence;
+admitted.textContent = admitted.textContent.slice(0, admitted.textContent.length -2) + '.';
+refused.textContent = refused.textContent.slice(0, refused.textContent.length - 2) + '.';
+
+// let tidyAdm.length.slice(-1));
+//Practice 1 -
+// let output = document.querySelector(".output");
+// output.innerHTML = '';
+
+// let i = 10;
+
+// while(i >= 0){
+//   const para = document.createElement('p');   
+//   if (i === 10){ 
+//     para.textContent = "Countdown " + i;
+//   } else if (i === 0) {
+//     para.textContent = "Blast off!";
+//   } else para.textContent = i;
+//   output.appendChild(para);
+//   i--;
+// };
+
+// const para = document.createElement('p');  
+// para.textContent = ;
+// output.appendChild(para);
+
+
+//Exercise 6 - Do while loops
+
+// const iLike = ["books", "music", "coffee", "cringe"];
+// const para = document.querySelector("#paragraph");
+// let sentence = "I like ";
+
+// let i = 0;
+// do {
+//   if (i === iLike.length - 1){
+//     sentence += " and " + iLike[i] + ".";
+//   } else {
+//     sentence += iLike[i] + ", ";
+//   }
+
+//   i++
+// } while (i < iLike.length);
+
+// para.textContent += sentence
+
+//Exercise 5 - While loops
+
+// const iLike = ["books", "music", "coffee", "cringe"];
+// let para = document.getElementById("paragraph");
+// let sentence = "I like ";
+
+// let i = 0;
+// while (i < iLike.length){
+//   if (i === iLike.length - 1) {
+//     sentence += " and " + iLike[i] + ".";
+//   } else {
+//     sentence += iLike[i] + ", ";
+//   }
+//   i++
+// };
+
+// para.textContent += sentence;
 
 //Exercise 4 - Skipping iterations with 'continue'
 
