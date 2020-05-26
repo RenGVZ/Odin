@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5/22</title>
+  
+  <style>
+    h1 {
+      font-size: large;
+      text-align: center;
+    }
+
+    .div-1 {
+      border-style: solid; 
+      border-color: aqua; 
+      border-width: 2px; 
+      width:fit-content; 
+      padding: 14px; 
+      margin-left: auto; 
+      margin-right: auto;
+    }
+
+   #play-btn {
+     /* height: auto;
+     width: auto; */
+     background-color: dodgerblue;
+     color: white;
+     border-radius: 4px;
+     font-size: 36px;
+     padding: 10px;
+     margin-right: 50%;
+     margin-left: auto;
+   }
+
+  </style>
+
+</head>
+<body>
+  <h1>Results</h1>
+
+  <div class="div-1">
+    <p id="paragraph"></p>
+  </div>
+
+  <button id="play-btn" onclick="playerPlay()">Play!</button>
+
+  
+<script src="5-22-Project-rockPaperScissors.js">
+  // const parag = document.getElementById("paragraph");
+  // function sayHi(name) {
+  //   // if (name === undefined) {
+  //   //   name = "stranger";
+  //   // }
+  //   name ?? "unknown";
+
+  //   parag.textContent = `Hello, ${name}`;
+  // }
+
+  // // sayHi();
+
+  // function checkAge(age) {
+  //   return (age>18) ? true : confirm("where are your parents?");
+
+  //   return (age > 18) || confirm("where are your parents?");
+  // }
+
+  // function min(a, b) {
+  //   return (a < b) ? a : b;
+  // }
+
+  // function pow(x, n) {
+  //   let result = x;
+
+  //   for(let i = 1; i < n; i++){
+  //     return result *= x;
+  //   }
+  //   return result;
+  // }
+
+  // let x = prompt("x?", "");
+  // let n = prompt ("n?", "");
+  
+  // if (n < 1){
+  //   `power ${n} is not supported`;
+  // } else {
+  //   parag.textContent = pow(x, n);
+  // }
+
+  // Arrow Functions
+
+  // let ask = (question, yes, no) => {
+  //   if (confirm(question)) yes();
+  //   else no();
+  // }
+
+  // ask(
+  //   "do you agree?",
+  //   yes = () => { alert("Yes I agree")},
+  //   no = () => { alert("I don't agree")}
+  // );
+
+</script>
+  
+</body>
+</html>
