@@ -10,6 +10,6 @@ const repeatString = function(word, num) {
     }
   return string;
 }
-}
+};
 
 module.exports = repeatString
