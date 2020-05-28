@@ -9,15 +9,20 @@ const displayPlayer = document.querySelector('#display-player');
 const displayComputer = document.querySelector('#display-computer');
 const displayRound = document.querySelector('#display-round');
 
+
 let playerScore = 0;
 let computerScore = 0;
 let roundCount = 0;
 
+if (playerScore == 5|| computerScore == 5) {
+  playerScore = 0;
+  computerScore = 0;
+  roundCount =0;
+}
+
 // GamePlay Functions
 function playRound(playerSelection, computerSelection) {
   if(playerSelection === computerSelection){
-    playerScore++;
-    computerScore++;
     roundCount++;
     displayRound.textContent = roundCount;
     displayPlayer.textContent = playerScore;

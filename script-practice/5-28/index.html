@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Listener Practice</title>
+</head>
+<body>
+  <p>Press Control Space to continue</p>
+<!-- <p>This page turns violet when you press the 'v' key</p> -->
+<!-- <p>This is a button <button>click</button> here</p> -->
+<!-- <a href="https://developer.mozilla.org/">MDN</a>  -->
+<h1></h1>
+
+  <script>
+    // Exercise 6
+    let para = document.createElement('p');
+    window.addEventListener('keydown', event => {
+      console.log(event)
+      if (event.key == " " && event.ctrlKey){
+        console.log('Continuing');
+        para.textContent = "We are Continuing..."
+      }
+      document.body.appendChild(para);
+    });
+
+
+    // Exercise 5
+    // window.addEventListener('keydown', event => {
+    //   console.log(event);
+    //   if (event.key == 'v'){
+    //     document.body.style.background = 'violet';
+    //   };
+    // });
+    // window.addEventListener('keyup', event => {
+    //   if (event.key == 'v') {
+    //     document.body.style.background = ''
+    //   }
+    // });
+
+    // Exercise 4
+    // const a = document.querySelector('a');
+    // a.addEventListener('click', event => {
+    //   console.log("Nope");
+    //   event.preventDefault();
+    //   a.textContent = "Sorry Charlie this link is prevented by preventDefault()"
+    // })
+
+    // Exercise 3
+    // let para = document.querySelector('p');
+    // let btn = document.querySelector('button');
+    // para.addEventListener('mousedown', () => {
+    //   console.log('handler for paragraph');
+    // });
+    // btn.addEventListener('mousedown', event => {
+    //   console.log('handler for button');
+    //   if (event.button == 0){
+    //     event.stopPropagation();
+    //   }
+    //   console.log(event);
+    // })
+
+    // Exercise 2
+    // let btn = document.querySelector('button');
+    // document.addEventListener('mousedown', event => {
+    //   console.log(event);
+    //   if (event.screenX == 73){
+    //     console.log('you got the b!')
+    //   }
+    // });
+
+    // Exercise 1
+    // const h1 = document.querySelector('h1');
+    // function once() {
+    //   console.log('Done.');
+    //   btn.removeEventListener('click', once);
+    // }
+    // btn.addEventListener('click', once);
+  </script>
+</body>
+</html>
