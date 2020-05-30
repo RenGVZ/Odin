@@ -18,6 +18,8 @@
   </style>
 </head>
 <body>
+<p>Drag this bar to change its width</p>
+<div style='background: orange; width: 60px; height: 20px;'></div>
 <!-- <p>Press Control Space to continue</p> -->
 <!-- <p>This page turns violet when you press the 'v' key</p> -->
 <!-- <p>This is a button <button>click</button> here</p> -->
@@ -26,16 +28,47 @@
 <h1></h1>
 
   <script>
-    // Exercise 7 - Primitive Drawing Program
-    window.addEventListener('click', event => {
-      console.log(event);
-      let dot = document.createElement('div');
-      dot.className = 'dot';
-      dot.style.left = (event.pageX - 4) + 'px';
-      dot.style.top = (event.pageY - 4) + 'px';
-      document.body.appendChild(dot);
+    // My Practice
+    let bar = document.querySelector('div');
+    bar.addEventListener('mouseenter', () => {
+      bar.style.background = 'blue';
+      
+    })
+    bar.addEventListener('mouseleave', () => {
+      bar.style.background = 'orange';
     })
 
+    // Exercise 8
+    // let lastX;
+    // let bar = document.querySelector('div');
+
+    // bar.addEventListener('mousedown', event => {
+    //   if (event.button == 0) {
+    //     lastX = event.clientX;
+    //     window.addEventListener('mousemove', moved)
+    //     event.preventDefault();
+    //     }
+    // });
+    // function moved(event) {
+    //   if (event.buttons == 0) {
+    //     window.removeEventListener('mousemove', moved);
+    //   } else {
+    //     let dist = event.clientX - lastX;
+    //     let newWidth = Math.max(10, bar.offsetWidth + dist);
+    //     bar.style.width = newWidth + 'px';
+    //     lastX = event.clientX;
+    //   }
+    // }
+
+    // Exercise 7 - Primitive Drawing Program
+    // window.addEventListener('click', event => {
+    //   console.log(event);
+    //   let dot = document.createElement('dot');
+    //   dot.className = 'dot';
+    //   dot.style.left = (event.pageX - 4) +'px';
+    //   dot.style.top = (event.pageY - 4) + 'px';
+    //   document.body.appendChild(dot);
+    // })
 
     // Exercise 6
     // let para = document.createElement('p');
@@ -47,7 +80,6 @@
     //   }
     //   document.body.appendChild(para);
     // });
-
 
     // Exercise 5
     // window.addEventListener('keydown', event => {
