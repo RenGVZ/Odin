@@ -10,16 +10,16 @@
       background: beige;
     }
     .dot {
-      height: 8px; width: 8px;
-      border-radius: 4px;
-      background: blue;
-      position: absolute;
+      position: absolute; display: block;
+      border: 2px solid red; border-radius: 50px;
+      height: 100px; width: 100px;
     }
   </style>
 </head>
 <body>
-<p>Drag this bar to change its width</p>
-<div style='background: orange; width: 60px; height: 20px;'></div>
+  <p>Touch this page</p>
+<!-- <p>Drag this bar to change its width</p>
+<div style='background: orange; width: 60px; height: 20px;'></div> -->
 <!-- <p>Press Control Space to continue</p> -->
 <!-- <p>This page turns violet when you press the 'v' key</p> -->
 <!-- <p>This is a button <button>click</button> here</p> -->
@@ -28,15 +28,32 @@
 <h1></h1>
 
   <script>
+    // Exercise 9
+    function update(event) {
+    for (let dot; dot = document.querySelector("dot");) {
+      dot.remove();
+    }
+    for (let i = 0; i < event.touches.length; i++) {
+      let {pageX, pageY} = event.touches[i];
+      let dot = document.createElement("dot");
+      dot.style.left = (pageX - 50) + "px";
+      dot.style.top = (pageY - 50) + "px";
+      document.body.appendChild(dot);
+    }
+    }
+    window.addEventListener("touchstart", update);
+    window.addEventListener("touchmove", update);
+    window.addEventListener("touchend", update);
+
     // My Practice
-    let bar = document.querySelector('div');
-    bar.addEventListener('mouseenter', () => {
-      bar.style.background = 'blue';
+    // let bar = document.querySelector('div');
+    // bar.addEventListener('mouseenter', () => {
+    //   bar.style.background = 'blue';
       
-    })
-    bar.addEventListener('mouseleave', () => {
-      bar.style.background = 'orange';
-    })
+    // })
+    // bar.addEventListener('mouseleave', () => {
+    //   bar.style.background = 'orange';
+    // })
 
     // Exercise 8
     // let lastX;
