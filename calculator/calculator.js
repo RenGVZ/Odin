@@ -36,11 +36,13 @@ function power(int, exp) {
 	return Math.pow(int, exp);
 }
 
-console.log(power(4, 3));
+// console.log(power(4, 3));
 
-function factorial() {
-	
+function factorial(n) {
+	return n ? n * factorial(n - 1 ) : 1;
 }
+
+console.log(factorial(5));
 
 module.exports = {
 	add,

@@ -59,19 +59,19 @@ describe('factorial', function() {
 		expect(calculator.factorial(0)).toEqual(1); // 0! = 1
 	});
 
-	xit('computes the factorial of 1', function() {
+	it('computes the factorial of 1', function() {
 		expect(calculator.factorial(1)).toEqual(1);
 	});
 
-	xit('computes the factorial of 2', function() {
+	it('computes the factorial of 2', function() {
 		expect(calculator.factorial(2)).toEqual(2);
 	});
 
-	xit('computes the factorial of 5', function() {
+	it('computes the factorial of 5', function() {
 		expect(calculator.factorial(5)).toEqual(120);
 	});
 
-	xit('computes the factorial of 10', function() {
+	it('computes the factorial of 10', function() {
 		expect(calculator.factorial(10)).toEqual(3628800);
 	});
 });
