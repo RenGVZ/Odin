@@ -32,3 +32,5 @@ var findNumbers = function(nums) {
 };
 
 console.log(findNumbers(nums));
+
+// Expected answer: 2

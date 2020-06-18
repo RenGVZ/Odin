@@ -20,3 +20,6 @@ var sortedSquares = function(A) {
 };
 
 console.log(sortedSquares(A));
+
+// Expected answer
+// [0,1,9,16,100]
