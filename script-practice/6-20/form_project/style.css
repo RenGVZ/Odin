@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200;400&display=swap');
+
+body {
+  background-image: linear-gradient(to left, #67DF9B, #20C4AE);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  font-family: 'MuseoModerno', cursive;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 12px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-size: large;
+  color: white;
+  background: #20C4AE;
+  height: 250px;
+}
+
+input[type="text"] {
+  border: none;
+  border-radius: 10px;
+  height: 20px;
+}
+
+#choices {
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+#submit-btn {
+  font-family: 'MuseoModerno', cursive;
+  font-size: large;
+  background: rgb(6, 170, 182);
+  color: white;
+  height: 35px;
+  width: 200px;
+  border-radius: 10px;
+  border: none;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.color {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+}
+
+.color > input {
+  margin: 0 auto;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  display: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+.color-circle {
+  background: white;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin: 0 auto;
+  border: 1px solid white;
+}
