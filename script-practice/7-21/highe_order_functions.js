@@ -45,4 +45,15 @@ let flattened = unflat.reduce((acc, cv) => {
 
 // console.log(flattened);
 let filteredDays = days.filter(day => day.includes('r') || day.includes('u'));
-console.log(filteredDays);
+// console.log(filteredDays);
+
+const bark = ((cluck) => {
+  console.log('woof, woof');
+  cluck();
+});
+
+const cluck = () => {
+  console.log('string');
+}
+
+console.log(bark(cluck));
