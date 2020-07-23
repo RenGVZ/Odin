@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript example</title>
+    <style>
+      body {
+        background-color: cadetblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+
+  </body>
+
+    <script>
+      const person = {
+        name : {
+          first: 'Bob',
+          last: 'Smith',
+        },
+        age: 32,
+        gender: 'male',
+        interests: ['music', 'skiing'],
+        bio: function() {
+          alert(this.name['first'] + ' ' + this.name['last'] + ' is ' + this['age'] + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+        },
+        greeting: function() {
+          alert('Hi! I\'m ' + this.name.first + '.');
+        },
+        myInterests: function() {
+          alert(`my name is ${person.name.first}, ${person.name.last} and my interests are ${person.interests[0]} and ${person.interests[1]}`);
+        }
+      }
+      person['eyes'] = 'brown';
+      person.farewell = function() { alert('bye felicia')};
+
+      let myDataName = 'height';
+      let myDataValue = "5'9";
+      person[myDataName] = myDataValue;
+
+      const myNotification = new Notification('Hello!');
+    </script>
+</html>
