@@ -60,11 +60,33 @@ class Calculator {
     this.prevOperand = '';
   }
 
+  getDisplayNumber(number) {
+    return number.toLocaleString('en');
+    // const stringNumber = number.toString();
+    // const integerDigits = parseFloat(stringNumber.split('.')[0]);
+    // const decimalDigits = stringNumber.split('.')[1];
+    // let integerDisplay
+    // if (isNaN(integerDigits)) {
+    //   integerDisplay = ''
+    // } else {
+    //   integerDisplay = integerDigits.toLocaleString('en', {
+    //   maximumFractionDigits: 0 })
+    // }
+    // if (decimalDigits != null) {
+    //   return  `${integerDisplay}.${decimalDigits}`
+    // } else {
+    //   return integerDisplay;
+    // }
+  }
+
   updateDisplay() {
     if (this.prevOperand === undefined) this.prevOperand = '';
     if (this.operation === undefined) this.operation = '';
-    this.currentNum.innerText = this.currentOperand;
-    this.prevNum.innerText = this.prevOperand + '' + this.operation;
+      this.currentNum.innerText = this.getDisplayNumber(this.currentOperand);
+      if (this.operation != null) {
+        this.prevNum.innerText = `${this.getDisplayNumber(this.prevOperand)} ${this.operation}`;
+      }
+    
     // display.innerText = this.currentNum;
   }
 }
@@ -93,7 +115,7 @@ deleteBtn.addEventListener('click', () => {
 numbers.forEach(number => {
   number.addEventListener('click', () => {
     // console.log(number.innerText)
-    calculator.appendNumber(number.innerText);
+    calculator.appendNumber(calculator.getDisplayNumber(number.innerText));
     calculator.updateDisplay();
   })
 })
