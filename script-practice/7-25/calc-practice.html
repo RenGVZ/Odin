@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gavin's Calculator App</title>
+  <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+  <div class="calculator-container">
+    <div class="display">
+      <div class="prev">
+        <div data-previous id="previous-num"></div>
+      </div>
+      <div data-current id="current-num"></div>
+    </div>
+
+    <div class="grid-container">
+      <button data-all-clear class="grid-item operator-icon">AC</button>
+      <button data-delete class="grid-item operator-icon">Del</button>
+      <button data-operation class="grid-item operator-icon">%</button>
+      <button data-operation class="grid-item operator-icon">÷</button>
+      <button data-number class="grid-item">7</button>
+      <button data-number class="grid-item">8</button>
+      <button data-number class="grid-item">9</button>
+      <button data-operation class="grid-item operator-icon">x</button>
+      <button data-number class="grid-item">4</button>
+      <button data-number class="grid-item">5</button>
+      <button data-number class="grid-item">6</button>
+      <button data-operation class="grid-item operator-icon">-</button>
+      <button data-number class="grid-item">1</button>
+      <button data-number class="grid-item">2</button>
+      <button data-number class="grid-item">3</button>
+      <button data-operation class="grid-item operator-icon">+</button>
+      <button data-number class="grid-item">0</button>
+      <button data-number class="grid-item">.</button>
+      <!-- <button class="grid-item">+/-</button> -->
+      <button data-equals class="grid-item operator-icon" id="equals">=</button>
+    </div>
+  </div>
+  
+</body>
+<script src='calc.js'></script>
+</html>

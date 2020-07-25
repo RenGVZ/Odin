@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&display=swap');
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to left, rgb(233, 158, 158), rgb(21, 176, 182));
+  font-family: 'Barlow', sans-serif;
+}
+
+.calculator-container {
+  height: 560px;
+  width: 380px;
+  background: white;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: -11px 13px 12px 10px rgb(0,0,0, 0.19);
+  font-weight: bold;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 110px;
+  border-radius: 10px;
+  width: 100%;
+  grid-column: 1 / -1;
+  background-color: rgba(252, 252, 252, 0.781);
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.prev {
+  align-self: normal;
+}
+
+#previous-num {
+  /* font-size: 30px; */
+  /* margin-block-start: 6px;
+  margin-inline-start: -49px; */
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 0;
+}
+
+#current-num {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 2rem;
+}
+
+.grid-container {
+  display: grid;
+  border-radius: 0px 0px 10px 10px;
+  height: 80.3%;
+  width: 100%;
+  grid-template-columns: auto auto auto auto;
+  display: grid;
+  background-color: rgb(71, 88, 90);
+  padding-top: 10px;
+}
+
+.grid-item {
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  background-color: rgb(247, 244, 244);
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+}
+
+.grid-item:hover {
+  background-color: rgb(255, 119, 29);
+  color: white;
+  font-size: 30px;
+}
+
+.grid-item:focus {
+ outline: none; 
+}
+
+.operator-icon {
+  background-color: rgb(91, 177, 184);
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+.operator-icon:hover {
+  background-color: rgb(85, 241, 133);
+  /* color: black; */
+}
+
+#equals {
+  grid-column: span 2;
+  width: 166px;
+  border-radius: 44px;
+}
