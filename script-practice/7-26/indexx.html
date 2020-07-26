@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fizz Buzz</title>
+</head>
+<body>
+  <h1 id="response"></h1>
+  
+
+  <script>
+    const response = document.querySelector("#response");
+    let answer = parseInt(prompt('What answer do you want to give to fizzbuzz?'));
+    document.addEventListener('onpageshow', answered(answer))
+
+    function answered(answer) {
+      if (answer % 3 === 0 && answer % 5 === 0) {
+        response.innerText = 'fizzbuzz bingo!';
+      } else if (answer % 5 === 0) {
+        response.innerText = 'buzz';
+      } else if (answer % 3 === 0) {
+        response.innerText = 'fizz';
+      } else {
+        response.innerText = 'no fizzz nor buzzz for you bucko';
+      }
+    }
+
+  </script>
+</body>
+</html>
