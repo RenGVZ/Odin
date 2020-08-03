@@ -61,3 +61,19 @@ function Car(name, company, year) {
 Car.prototype = new Vehicle('Car');
 
 let  corolla = new Car('Corolla', "Toyota", 2019);
+
+function Animal() {
+  this.eats = true,
+  this.walks = function() {
+    return "Animal walking"
+  }
+}
+
+function Dog(name) {
+  this.name = name,
+  this.barks = function() {
+    return "woof! woof!"
+  }
+}
+
+let doberman = new Dog('Ralph');
